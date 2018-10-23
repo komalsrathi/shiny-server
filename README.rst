@@ -96,6 +96,7 @@ Edit config file to add your app
 
 	# Instruct Shiny Server to run applications as the user "shiny"
 	run_as shiny;
+	preserve_logs true; # this is required to preserve logs
 
 	# Define a server that listens on port 3838
 	server {
