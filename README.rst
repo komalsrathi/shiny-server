@@ -82,7 +82,8 @@ Install Shiny Server
 
 	# fetch all your data in corresponding app directory
 	# do this before installing R packages
-	sudo mount -o remount,exec /tmp
+	sudo mount -o remount,exec /tmp 
+	export TMPDIR=~/tmp # or do this. I had to do this after the latest upgrade.
 
 	# now install packages
 	sudo R
