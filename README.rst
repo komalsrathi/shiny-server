@@ -23,11 +23,8 @@ Upload all data to server
 
 .. code-block:: bash
 
-	scp -r marislab-webportal rathik@reslndbhicbio02.research.chop.edu:/home/rathik/shinyapps/neuroblastoma-web-portal/
+	scp -r your-app-name server:/path/to/shiny-apps/
 	
-	# change permissions so everyone can access it
-	sudo chmod -R 777 /home/rathik/
-
 Install R
 =========
 
@@ -117,14 +114,14 @@ Edit config file to add your app
 	    directory_index on;
 	  }
 
-	  # Define location at NWP URL
-	  location /NWP {
+	  # Define location of your app
+	  location /your-app-name {
 
 	    # application directory
-	    app_dir /home/rathik/shinyapps/marislab-webportal/;
+	    app_dir //;
 
 	    # log directory
-	    log_dir /home/rathik/shinyapps/marislab-webportal/logs;
+	    log_dir /path/to/shiny-apps/your-app-name/logs;
 
 	    # directory structure
 	    directory_index on;
